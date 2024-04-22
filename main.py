@@ -3,7 +3,7 @@ import re
 import requests
 from lxml import etree
 
-from config import TEAM
+from config import TEAM, TODO, OUT_OF_DATE
 
 
 def download_page(url):
@@ -44,15 +44,13 @@ def collect_teams_tests(team, parsed_table):
 
 
 if __name__ == '__main__':
-    content1 = download_page(
-        "https://dashboards.sero.wh.rnd.internal.ericsson.com/epg_st_passrates/epg_st_passrates_weekly_master_not_run_team.html")
+    ood = download_page(OUT_OF_DATE)
 
     print("outdated tests: ")
-    print(collect_teams_tests(TEAM, parse_table(content1)))
+    print(collect_teams_tests(TEAM, parse_table(ood)))
 
-    content2 = download_page(
-        "https://dashboards.sero.wh.rnd.internal.ericsson.com/epg_st_passrates/epg_st_passrates_weekly_master_to_do_team.html")
+    todo = download_page(TODO)
 
     print("to do tests: ")
-    print(collect_teams_tests(TEAM, parse_table(content2)))
+    print(collect_teams_tests(TEAM, parse_table(todo)))
 

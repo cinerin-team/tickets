@@ -1,3 +1,4 @@
+import pprint
 import re
 
 import requests
@@ -47,10 +48,10 @@ if __name__ == '__main__':
     ood = download_page(OUT_OF_DATE)
 
     print("outdated tests: ")
-    print(collect_teams_tests(TEAM, parse_table(ood)))
+    pprint.pprint(collect_teams_tests(TEAM, parse_table(ood)))
 
     todo = download_page(TODO)
 
     print("to do tests: ")
-    print(collect_teams_tests(TEAM, parse_table(todo)))
+    pprint.pprint(collect_teams_tests(TEAM, parse_table(todo)))
 

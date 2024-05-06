@@ -54,51 +54,6 @@ def download_page_w_cred(url, cred):
     # Oldal tartalmának kiíratása
     return page_source
 
-    # Várakozás, hogy a bejelentkezés befejeződjön
-    # (Itt érdemes hozzáadni egy várakozási időt, hogy biztosítsd a betöltődést)
-
-    # import requests
-    #
-    # # A bejelentkezéshez szükséges adatok
-    # login_url = TREX_LOGIN  # Bejelentkezési URL
-    # username = cred.get_username()
-    # password = cred.get_password()
-    #
-    # # Bejelentkezési adatok
-    # login_data = {
-    #     'name': username,
-    #     'pass': password
-    # }
-    #
-    # # Session létrehozása
-    # session = requests.Session()
-    #
-    # # Bejelentkezési kérés küldése
-    # login_response = session.post(login_url, data=login_data)
-    #
-    # # Ellenőrizzük, hogy sikeres volt-e a bejelentkezés
-    # if login_response.status_code == 200:
-    #     print("Sikeres bejelentkezés!")
-    #
-    #     # A tartalom letöltése a bejelentkezett felhasználó számára elérhető oldalról
-    #     target_url = TREX_QUERY_FOR_ALL_CINERIN_TCS  # A letöltendő oldal URL-je
-    #     content_response = session.get(target_url)
-    #
-    #     # A letöltött tartalom tárolása egy változóban
-    #     web_content = content_response.text
-    #
-    #     # Az oldal tartalmának kiírása
-    #     print(web_content)
-    # else:
-    #     print("Sikertelen bejelentkezés!")
-
-    # import requests
-    # values = {'edit-name': cred.get_username(),
-    #           'edit-pass': cred.get_password()}
-    #
-    # r = requests.post(TREX_LOGIN, data=values)
-    # return r.content
-
 
 def process_downloaded_page_from_dashboard(string):
     string = string.replace("\n", "")

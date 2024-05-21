@@ -3,6 +3,8 @@ TODO_DASHBOARD = "https://dashboards.sero.wh.rnd.internal.ericsson.com/epg_st_pa
 OUT_OF_DATE_DASHBOARD = "https://dashboards.sero.wh.rnd.internal.ericsson.com/epg_st_passrates/epg_st_passrates_weekly_master_not_run_team.html"
 TREX_QUERY_FOR_ALL_CINERIN_TCS = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_MASTER_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22],%22Responsible_Team%22:%22Cinerin%22}}'
 TREX_LOGIN = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_MASTER_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22]}}'
+EVENT_LOGIN = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/eventhistory/name'
+EVENT_QUERY = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/eventhistory/name?failure_reason=&product=&parent=&include_rerun=on&hostname=&stream=&label=&verdict_skipped=on&verdict_failed=on&verdict_FAIL=on&verdict_ERROR=on&verdict_INTERRUPT=on&verdict_TIMEOUT=on&verdict_UNSTABLE=on&verdict_passed=on&verdict_PASS=on&verdict_WARNING=on&verdict_INCONC=on'
 TCS = {
     "TC37512.4.6.10.1": {"scope": "2Extended", "owner": "ECSIGER"},
     "TC37515.8.1.5.1": {"scope": "Basic", "owner": "ECSIGER"},

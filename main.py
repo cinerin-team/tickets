@@ -8,12 +8,10 @@ from misc.trex import download_page_w_cred_trex, parse_table_for_trex
 
 if __name__ == '__main__':
     ood_dash = download_page(OUT_OF_DATE_DASHBOARD)
-
     print("outdated tests from dashboard: ")
     pprint.pprint(collect_teams_tests(TEAM, parse_table_for_dash(ood_dash)))
 
     todo_dash = download_page(TODO_DASHBOARD)
-
     print("to do tests from dashboard: ")
     pprint.pprint(collect_teams_tests(TEAM, parse_table_for_dash(todo_dash)))
 

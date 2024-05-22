@@ -89,5 +89,6 @@ def parse_table_for_event(string):
         values = [col.text for col in row]
         one_line = dict(zip(headers, values))
         clean_line = {k: v for k, v in one_line.items()}
+        clean_line['Test Result'] = clean_line.pop(None)
         dict_list.append(clean_line)
     return dict_list

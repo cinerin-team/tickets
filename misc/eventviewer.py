@@ -56,6 +56,17 @@ def process_downloaded_page_from_event(string):
     string = string.replace("\n", "")
     string = re.sub('<a class="cimsui-tooltip cimsui-tooltip-processed".*?</span></a>', '', string)
     string = re.sub('<span class="cimsui-popover cimsui-popover-processed".*?</div></span>', '', string)
+    string = re.sub('<span class="cims-icons-15 cims-icons-inconc" title="Inconclusive">&nbsp;</span>', 'Inconclusive',
+                    string)
+    string = re.sub('<span class="cims-icons-15 cims-icons-fail" title="Failed">&nbsp;</span>', 'Failed', string)
+    string = re.sub('<span class="cims-icons-15 cims-icons-ok" title="Passed">&nbsp;</span>', 'Passed', string)
+    string = re.sub('<span class="cims-icons-15 cims-icons-error" title="Error">&nbsp;</span>', 'Error', string)
+    string = re.sub('<span class="cims-icons-15 cims-icons-interrupt" title="Interrupted">&nbsp;</span>', 'Interrupted',
+                    string)
+    string = re.sub('<span class="cims-icons-15 cims-icons-fail-inverted" title="Failed with TR">&nbsp;</span>',
+                    'Failed with TR', string)
+    string = re.sub('<span class="cims-icons-15 cims-icons-timeout" title="Timed out">&nbsp;</span>', 'Timed out',
+                    string)
     m = re.search(
         '(<table id="cimsui-EventHistoryViewer-event-history-viewer-" class="cimsui-datatable table table-striped dataTable no-footer" role="grid" aria-describedby="cimsui-EventHistoryViewer-event-history-viewer-_info" style="opacity: 1;">.+?</table>)',
         string)

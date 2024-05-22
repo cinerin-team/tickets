@@ -20,6 +20,6 @@ if __name__ == '__main__':
     print("all tests to cinerin from treq-s: ")
     pprint.pprint(parse_table_for_trex(trex))
 
-    event = download_page_w_cred_event("TC37540.1.6.16", credentials)
-    print("TC37540.1.6.16 tests from event viewer: ")
+    event = download_page_w_cred_event("TC1122.1.1.10.1", credentials)
+    print("TC1122.1.1.10.1 tests from event viewer: ")
     pprint.pprint(parse_table_for_event(event))

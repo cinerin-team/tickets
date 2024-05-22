@@ -5,29 +5,40 @@ TREX_QUERY_FOR_ALL_CINERIN_TCS = 'https://epgweb.sero.wh.rnd.internal.ericsson.c
 TREX_LOGIN = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_MASTER_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22]}}'
 EVENT_LOGIN = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/eventhistory/name'
 EVENT_QUERY = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/eventhistory/name?failure_reason=&product=&parent=&include_rerun=on&hostname=&stream=&label=&verdict_skipped=on&verdict_failed=on&verdict_FAIL=on&verdict_ERROR=on&verdict_INTERRUPT=on&verdict_TIMEOUT=on&verdict_UNSTABLE=on&verdict_passed=on&verdict_PASS=on&verdict_WARNING=on&verdict_INCONC=on'
+SPRINT_WEEKS = 3
+SPRINT_START_DATE = "2024-05-27"
+SPRINT_ID = 21064
+MAIN = "EPG3.39"
 TCS = {
-    "TC37512.4.6.10.1": {"scope": "2Extended", "owner": "ECSIGER"},
-    "TC37515.8.1.5.1": {"scope": "Basic", "owner": "ECSIGER"},
-    "TC37512.4.4.18.23": {"scope": "Basic", "owner": "ECSIGER"},
-    "TC37512.4.6.10.11": {"scope": "Dynamic", "owner": "ECSIGER"},
-    "TC37512.4.6.17.1": {"scope": "Dynamic", "owner": "ECSIGER"},
-    "TC37512.6.6.17.5": {"scope": "Dynamic", "owner": "ECSIGER"},
-    "TC37512.6.6.17.12": {"scope": "Dynamic", "owner": "ECSIGER"},
-    "TC37553.1.6.8": {"scope": "2Dynamic", "owner": "ERKMIAP"},
-    "TC37512.6.6.11.25": {"scope": "2Dynamic", "owner": "ERKMIAP"},
-    "TC37540.1.6.16": {"scope": "2Extended", "owner": "ERKMIAP"},
-    "TC1122.1.1.10.1": {"scope": "Extended", "owner": "ERKMIAP"},
-    "TC37548.3.6.1": {"scope": "2Extended", "owner": "ERKMIAP"},
-    "TC37548.3.6.2": {"scope": "2Extended", "owner": "ERKMIAP"},
-    "TC37548.3.6.3": {"scope": "Extended", "owner": "ERKMIAP"},
-    "TC2020.5.6.9.5": {"scope": "2Extended", "owner": "ETHNYZ"},
-    "TC2020.5.6.14.1": {"scope": "Dynamic", "owner": "ETHNYZ"},
-    "TC1123.1.6.1.1": {"scope": "Dynamic", "owner": "ETHNYZ"},
-    "TC22687.1.1.2.1": {"scope": "Dynamic", "owner": "ETHNYZ"},
-    "TC22711.2.2.2.1": {"scope": "Extended", "owner": "ETHNYZ"},
-    "TC37512.4.6.1.53": {"scope": "2Extended", "owner": "ETOTIST"},
-    "TC37540.1.6.11": {"scope": "2Extended", "owner": "ETOTIST"},
-    "TC37540.40.6.1": {"scope": "2Extended", "owner": "ETOTIST"},
-    "TC37512.4.6.1.53.1": {"scope": "Dynamic", "owner": "ETOTIST"},
-    "TC37485.1.6.1": {"scope": "2Extended", "owner": "ETOTIST"}
+    "TC37512.4.6.1.53": {"scope": "2Extended", "owner": "ETOTIST", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37540.1.6.11": {"scope": "2Extended", "owner": "ETOTIST", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37540.40.6.1": {"scope": "2Extended", "owner": "ETOTIST", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37512.4.6.1.53.1": {"scope": "Dynamic", "owner": "ETOTIST", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37485.1.6.1": {"scope": "2Extended", "owner": "ETOTIST", "Label1": "REGRESSION", "Label2": "MAINTAINABILITY", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37512.4.6.10.1": {"scope": "2Extended", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37515.8.1.5.1": {"scope": "Basic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_BASIC", "Label4": "ST_DAILY", "Original Estimate": 86400, "Story Points": 3},
+    "TC37512.4.4.18.23": {"scope": "Basic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_BASIC", "Label4": "ST_DAILY", "Original Estimate": 86400, "Story Points": 3},
+    "TC37512.4.6.10.11": {"scope": "Dynamic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37512.4.6.17.1": {"scope": "Dynamic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37512.6.6.17.5": {"scope": "Dynamic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37512.6.6.17.12": {"scope": "Dynamic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC2020.5.6.9.5": {"scope": "2Extended", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC2020.5.6.14.1": {"scope": "Dynamic", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_DYNAMIC", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC1123.1.6.1.1": {"scope": "Dynamic", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_DYNAMIC", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC22687.1.1.2.1": {"scope": "Dynamic", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_DYNAMIC", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC22711.2.2.2.1": {"scope": "Extended", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_EXTENDED", "Label4": "ST_WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37553.1.6.8": {"scope": "Dynamic", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37512.6.6.11.25": {"scope": "2Dynamic", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_2DYNAMIC", "Label4": "ST_BI-MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37540.1.6.16": {"scope": "2Extended", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC1122.1.1.10.1": {"scope": "Extended", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_EXTENDED", "Label4": "ST_WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37548.3.6.1": {"scope": "2Extended", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37548.3.6.2": {"scope": "2Extended", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37548.3.6.3": {"scope": "Extended", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_EXTENDED", "Label4": "ST_WEEKLY", "Original Estimate": 14400, "Story Points": 0.5}
+}
+SCOPE_MAPPING = {
+    "2Extended": 14,
+    "Basic": 7 * SPRINT_WEEKS,
+    "Dynamic": 30,
+    "Extended": 7,
+    "2Dynamic": 60
 }

@@ -22,19 +22,29 @@ def collect_the_tcs_which_will_td_in_next_sprint(tc_w_last_run):
         if tc["Testcase Id"] not in TCS.keys():
             continue
         for i in range(SPRINT_WEEKS):
-            if datetime(int(tc["Build"].split("-")[0]), int(tc["Build"].split("-")[1]),
-                        int(tc["Build"].split("-")[2])) + timedelta(
+            final_date = datetime(int(tc["Build"].split("-")[0]), int(tc["Build"].split("-")[1]),
+                              int(tc["Build"].split("-")[2])) + timedelta(
                 days=SCOPE_MAPPING[TCS[tc["Testcase Id"]]["scope"]] + i * SCOPE_MAPPING[
-                    TCS[tc["Testcase Id"]]["scope"]]) < end_of_sprint:
-                result.append(tc["Testcase Id"])
+                    TCS[tc["Testcase Id"]]["scope"]])
+            if final_date < end_of_sprint:
+                result.append((tc["Testcase Id"], " analyze a build before this date: " + str(final_date.strftime("%Y-%d-%m"))))
 
     return result
+
+
+def determine_deadline(days):
+    if days <= 7:
+        return " W1"
+    elif days <= 14:
+        return " W2"
+    else:
+        return " W3"
 
 
 def build_array_for_csv_from_tc_list(arr, branch):
     result = []
     for item in arr:
-        result.append([item, str(SPRINT_ID), "Task", "High", TCS[item]["owner"], "erkmiap", branch, TEAM, TCS[item]["Label1"], TCS[item]["Label2"], TCS[item]["Label3"], TCS[item]["Label4"], TCS[item]["Original Estimate"], TCS[item]["Story Points"]])
+        result.append([item[0] + item[1], str(SPRINT_ID), "Task", "High", TCS[item[0]]["owner"], "ERKMIAP", branch, TEAM, TCS[item[0]]["Label1"], TCS[item[0]]["Label2"], TCS[item[0]]["Label3"], TCS[item[0]]["Label4"], TCS[item[0]]["Original Estimate"], TCS[item[0]]["Story Points"]])
 
     return result
 
@@ -43,14 +53,14 @@ def write_out_array_to_csv(arr):
     with open('sprint.csv', 'w') as file:
         file.write(
             "Summary;Sprint;Issue Type;Priority;Assignee;Reporter;Fix Version/s;Team;Labels;Labels;Labels;Labels;Original Estimate;Story Points\n" +
-            "EP handling;" + str(SPRINT_ID) + ";Task;High;ecsiger;erkmiap;;Cinerin;ST;;;;;\n" +
-            "EP handling;" + str(SPRINT_ID) + ";Task;High;etotist;erkmiap;;Cinerin;ST;;;;;\n" +
-            "CI Monitor;" + str(SPRINT_ID) + ";Task;High;erkmiap;erkmiap;;Cinerin;CI;;;;162000;5\n" +
-            "CI Monitor;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;erkmiap;;Cinerin;CI;;;;162000;5\n" +
-            "EPG stportal node maintenance;" + str(SPRINT_ID) + ";Task;High;erkmiap;erkmiap;;Cinerin;CI;;;;108000;3.75\n" +
-            "EPG stportal node maintenance;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;erkmiap;;Cinerin;CI;;;;108000;3.75\n" +
-            "Main Track Releasability reporting, monitoring W3;" + str(SPRINT_ID) + ";Task;High;etotist;erkmiap;"+MAIN+";Cinerin;Other;;;;14400;0.5\n" +
-            "Main Track Releasability reporting, monitoring W2;" + str(SPRINT_ID) + ";Task;High;ethnyz;erkmiap;"+MAIN+";Cinerin;Other;;;;14400;0.5\n" +
-            "Main Track Releasability reporting, monitoring W1;" + str(SPRINT_ID) + ";Task;High;ecsiger;erkmiap;"+MAIN+";Cinerin;Other;;;;14400;0.5\n")
+            "EP handling;" + str(SPRINT_ID) + ";Task;High;ecsiger;ERKMIAP;;Cinerin;ST;;;;;\n" +
+            "EP handling;" + str(SPRINT_ID) + ";Task;High;etotist;ERKMIAP;;Cinerin;ST;;;;;\n" +
+            "CI Monitor;" + str(SPRINT_ID) + ";Task;High;ERKMIAP;ERKMIAP;;Cinerin;CI;;;;162000;5\n" +
+            "CI Monitor;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;ERKMIAP;;Cinerin;CI;;;;162000;5\n" +
+            "EPG stportal node maintenance;" + str(SPRINT_ID) + ";Task;High;ERKMIAP;ERKMIAP;;Cinerin;CI;;;;108000;3.75\n" +
+            "EPG stportal node maintenance;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;ERKMIAP;;Cinerin;CI;;;;108000;3.75\n" +
+            "Main Track Releasability reporting, monitoring W3;" + str(SPRINT_ID) + ";Task;High;etotist;ERKMIAP;"+MAIN+";Cinerin;Other;;;;14400;0.5\n" +
+            "Main Track Releasability reporting, monitoring W2;" + str(SPRINT_ID) + ";Task;High;ethnyz;ERKMIAP;"+MAIN+";Cinerin;Other;;;;14400;0.5\n" +
+            "Main Track Releasability reporting, monitoring W1;" + str(SPRINT_ID) + ";Task;High;ecsiger;ERKMIAP;"+MAIN+";Cinerin;Other;;;;14400;0.5\n")
         for row in arr:
             file.write(';'.join(map(str, row)) + '\n')

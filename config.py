@@ -1,14 +1,20 @@
+# these variables should be updated!!!
+SPRINT_ID = 21064
+TREX_QUERY_FOR_ALL_CINERIN_TCS_RELEASE = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_3.38_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22]}}'
+SPRINT_START_DATE = "2024-05-27"
+SPRINT_WEEKS = 3
+MAIN = "EPG3.39"
+RELEASE = "EPG3.38"
+RELEASE_NEEDED = False
+
+# these variables should not be updated
+TREX_QUERY_FOR_ALL_CINERIN_TCS_MAIN = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_MASTER_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22],%22Responsible_Team%22:%22Cinerin%22}}'
 TEAM = "Cinerin"
 TODO_DASHBOARD = "https://dashboards.sero.wh.rnd.internal.ericsson.com/epg_st_passrates/epg_st_passrates_weekly_master_to_do_team.html"
 OUT_OF_DATE_DASHBOARD = "https://dashboards.sero.wh.rnd.internal.ericsson.com/epg_st_passrates/epg_st_passrates_weekly_master_not_run_team.html"
-TREX_QUERY_FOR_ALL_CINERIN_TCS = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_MASTER_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22],%22Responsible_Team%22:%22Cinerin%22}}'
 TREX_LOGIN = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_MASTER_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22]}}'
 EVENT_LOGIN = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/eventhistory/name'
 EVENT_QUERY = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/eventhistory/name?failure_reason=&product=&parent=&include_rerun=on&hostname=&stream=&label=&verdict_skipped=on&verdict_failed=on&verdict_FAIL=on&verdict_ERROR=on&verdict_INTERRUPT=on&verdict_TIMEOUT=on&verdict_UNSTABLE=on&verdict_passed=on&verdict_PASS=on&verdict_WARNING=on&verdict_INCONC=on'
-SPRINT_WEEKS = 3
-SPRINT_START_DATE = "2024-05-27"
-SPRINT_ID = 21064
-MAIN = "EPG3.39"
 TCS = {
     "TC37512.4.6.1.53": {"scope": "2Extended", "owner": "ETOTIST", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
     "TC37540.1.6.11": {"scope": "2Extended", "owner": "ETOTIST", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},

@@ -31,17 +31,15 @@ def collect_the_tcs_which_will_td_in_next_sprint(tc_w_last_run):
     return result
 
 
-def build_array_for_csv_from_tc_list(arr):
+def build_array_for_csv_from_tc_list(arr, branch):
     result = []
     for item in arr:
-        result.append([item, str(SPRINT_ID), "Task", "High", TCS[item]["owner"], "erkmiap", MAIN, TEAM, TCS[item]["Label1"], TCS[item]["Label2"], TCS[item]["Label3"], TCS[item]["Label4"], TCS[item]["Original Estimate"], TCS[item]["Story Points"]])
+        result.append([item, str(SPRINT_ID), "Task", "High", TCS[item]["owner"], "erkmiap", branch, TEAM, TCS[item]["Label1"], TCS[item]["Label2"], TCS[item]["Label3"], TCS[item]["Label4"], TCS[item]["Original Estimate"], TCS[item]["Story Points"]])
 
     return result
 
 
 def write_out_array_to_csv(arr):
-    # data = [['Name', 'Age', 'City'], ['Alice', 30, 'New York'], ['Bob', 25, 'Los Angeles']]  # Example 2D array
-
     with open('sprint.csv', 'w') as file:
         file.write(
             "Summary;Sprint;Issue Type;Priority;Assignee;Reporter;Fix Version/s;Team;Labels;Labels;Labels;Labels;Original Estimate;Story Points\n" +
@@ -51,8 +49,8 @@ def write_out_array_to_csv(arr):
             "CI Monitor;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;erkmiap;;Cinerin;CI;;;;162000;5\n" +
             "EPG stportal node maintenance;" + str(SPRINT_ID) + ";Task;High;erkmiap;erkmiap;;Cinerin;CI;;;;108000;3.75\n" +
             "EPG stportal node maintenance;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;erkmiap;;Cinerin;CI;;;;108000;3.75\n" +
-            "Main Track Releasability reporting, monitoring W3;" + str(SPRINT_ID) + ";Task;High;etotist;erkmiap;EPG3.39;Cinerin;Other;;;;14400;0.5\n" +
-            "Main Track Releasability reporting, monitoring W2;" + str(SPRINT_ID) + ";Task;High;ethnyz;erkmiap;EPG3.39;Cinerin;Other;;;;14400;0.5\n" +
-            "Main Track Releasability reporting, monitoring W1;" + str(SPRINT_ID) + ";Task;High;ecsiger;erkmiap;EPG3.39;Cinerin;Other;;;;14400;0.5\n")
+            "Main Track Releasability reporting, monitoring W3;" + str(SPRINT_ID) + ";Task;High;etotist;erkmiap;"+MAIN+";Cinerin;Other;;;;14400;0.5\n" +
+            "Main Track Releasability reporting, monitoring W2;" + str(SPRINT_ID) + ";Task;High;ethnyz;erkmiap;"+MAIN+";Cinerin;Other;;;;14400;0.5\n" +
+            "Main Track Releasability reporting, monitoring W1;" + str(SPRINT_ID) + ";Task;High;ecsiger;erkmiap;"+MAIN+";Cinerin;Other;;;;14400;0.5\n")
         for row in arr:
             file.write(';'.join(map(str, row)) + '\n')

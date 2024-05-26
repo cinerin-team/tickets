@@ -27,7 +27,7 @@ def collect_the_tcs_which_will_td_in_next_sprint(tc_w_last_run):
                 days=SCOPE_MAPPING[TCS[tc["Testcase Id"]]["scope"]] + i * SCOPE_MAPPING[
                     TCS[tc["Testcase Id"]]["scope"]])
             if final_date < end_of_sprint:
-                result.append((tc["Testcase Id"], " analyze a build before this date: " + str(final_date.strftime("%Y-%d-%m"))))
+                result.append((tc["Testcase Id"], " analyze a build before this date: " + str(final_date.strftime("%Y-%b-%d"))))
 
     return result
 

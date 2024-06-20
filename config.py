@@ -44,7 +44,7 @@ TCS = {
 SCOPE_MAPPING = {
     "2Extended": 14,
     "Basic": 7 * SPRINT_WEEKS, # as only one ticket is needed per week
-    "Dynamic": 28,
+    "Dynamic": 14,
     "Extended": 7,
     "2Dynamic": 56
 }

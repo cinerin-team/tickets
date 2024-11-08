@@ -61,19 +61,19 @@ def write_out_array_to_csv(arr):
     with open('sprint.csv', 'w') as file:
         file.write(
             "Summary;Sprint;Issue Type;Priority;Assignee;Reporter;Fix Version/s;Team;Labels;Labels;Labels;Labels;Original Estimate;Story Points\n" +
-            "EP handling;" + str(SPRINT_ID) + ";Task;High;ecsiger;ERKMIAP;;Cinerin;ST;;;;;\n" +
-            "EP handling;" + str(SPRINT_ID) + ";Task;High;etotist;ERKMIAP;;Cinerin;ST;;;;;\n" +
-            "CI Monitor;" + str(SPRINT_ID) + ";Task;High;ERKMIAP;ERKMIAP;;Cinerin;CI;;;;162000;5\n" +
-            "CI Monitor;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;ERKMIAP;;Cinerin;CI;;;;162000;5\n" +
+            "EP handling;" + str(SPRINT_ID) + ";Task;High;ecsiger;ETOTIST;;Cinerin;ST;;;;;\n" +
+            "EP handling;" + str(SPRINT_ID) + ";Task;High;etotist;ETOTIST;;Cinerin;ST;;;;;\n" +
+            "CI Monitor;" + str(SPRINT_ID) + ";Task;High;ERKMIAP;ETOTIST;;Cinerin;CI;;;;162000;5\n" +
+            "CI Monitor;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;ETOTIST;;Cinerin;CI;;;;162000;5\n" +
             "EPG stportal node maintenance;" + str(
-                SPRINT_ID) + ";Task;High;ERKMIAP;ERKMIAP;;Cinerin;CI;;;;108000;3.75\n" +
+                SPRINT_ID) + ";Task;High;ERKMIAP;ETOTIST;;Cinerin;CI;;;;108000;3.75\n" +
             "EPG stportal node maintenance;" + str(
-                SPRINT_ID) + ";Task;High;ETHNYZ;ERKMIAP;;Cinerin;CI;;;;108000;3.75\n" +
+                SPRINT_ID) + ";Task;High;ETHNYZ;ETOTIST;;Cinerin;CI;;;;108000;3.75\n" +
             "Main Track Releasability reporting, monitoring W3;" + str(
-                SPRINT_ID) + ";Task;High;etotist;ERKMIAP;" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
+                SPRINT_ID) + ";Task;High;etotist;ETOTIST;" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
             "Main Track Releasability reporting, monitoring W2;" + str(
-                SPRINT_ID) + ";Task;High;ethnyz;ERKMIAP;" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
+                SPRINT_ID) + ";Task;High;ethnyz;ETOTIST;" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
             "Main Track Releasability reporting, monitoring W1;" + str(
-                SPRINT_ID) + ";Task;High;ecsiger;ERKMIAP;" + MAIN + ";Cinerin;Other;;;;14400;0.5\n")
+                SPRINT_ID) + ";Task;High;ecsiger;ETOTIST;" + MAIN + ";Cinerin;Other;;;;14400;0.5\n")
         for row in arr:
             file.write(';'.join(map(str, row)) + '\n')

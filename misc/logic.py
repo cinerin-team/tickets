@@ -50,7 +50,7 @@ def build_array_for_csv_from_tc_list(arr, branch):
     result = []
     for item in arr:
         result.append(
-            [item[0] + item[1], str(SPRINT_ID), "Task", "High", TCS[item[0]]["owner"], "ERKMIAP", branch, TEAM,
+            [item[0] + item[1], str(SPRINT_ID), "Task", "High", TCS[item[0]]["owner"], "ETOTIST", branch, TEAM,
              TCS[item[0]]["Label1"], TCS[item[0]]["Label2"], TCS[item[0]]["Label3"], TCS[item[0]]["Label4"],
              TCS[item[0]]["Original Estimate"], TCS[item[0]]["Story Points"]])
 

@@ -14,17 +14,6 @@ def collect_all_our_tickets_with_their_last_build_and_run(trex_arr):
     return result
 
 
-def w_tag_builder(final_date):
-    start_of_sprint = datetime(int(SPRINT_START_DATE.split("-")[0]), int(SPRINT_START_DATE.split("-")[1]),
-                               int(SPRINT_START_DATE.split("-")[2]))
-    if (final_date - start_of_sprint).days < 7:
-        return "W1"
-    elif (final_date - start_of_sprint).days < 14:
-        return "W2"
-    else:
-        return "W3"
-
-
 def collect_the_tcs_which_will_td_in_next_sprint(tc_w_last_run):
     result = []
     end_of_sprint = datetime(int(SPRINT_START_DATE.split("-")[0]), int(SPRINT_START_DATE.split("-")[1]),
@@ -38,10 +27,9 @@ def collect_the_tcs_which_will_td_in_next_sprint(tc_w_last_run):
                 days=SCOPE_MAPPING[TCS[tc["Testcase Id"]]["scope"]] + i * SCOPE_MAPPING[
                     TCS[tc["Testcase Id"]]["scope"]])
             if final_date < end_of_sprint:
-                result.append((tc["Testcase Id"], " " + w_tag_builder(final_date) + " due date: " + str(
-                    final_date.strftime("%Y-%b-%d")) + " scope: " + str(SCOPE_MAPPING[
-                                                                            TCS[tc["Testcase Id"]][
-                                                                                "scope"]]) + " days"))
+                result.append((tc["Testcase Id"], " " + " scope: " + str(SCOPE_MAPPING[
+                                                                             TCS[tc["Testcase Id"]][
+                                                                                 "scope"]]) + " days"))
 
     return result
 

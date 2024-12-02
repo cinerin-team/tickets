@@ -51,11 +51,11 @@ def write_out_array_to_csv(arr):
             "Summary;Sprint;Issue Type;Priority;Assignee;Reporter;Fix Version/s;Team;Labels;Labels;Labels;Labels;Original Estimate;Story Points\n" +
             "EP handling;" + str(SPRINT_ID) + ";Task;High;ecsiger;ETOTIST;;Cinerin;ST;;;;;\n" +
             "EP handling;" + str(SPRINT_ID) + ";Task;High;etotist;ETOTIST;;Cinerin;ST;;;;;\n" +
-            "CI Monitor;" + str(SPRINT_ID) + ";Task;High;ERKMIAP;ETOTIST;;Cinerin;CI;;;;162000;5\n" +
-            "CI Monitor;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;ETOTIST;;Cinerin;CI;;;;162000;5\n" +
-            "EPG stportal node maintenance;" + str(
+            "CI Monitor - EVEN WEEK;" + str(SPRINT_ID) + ";Task;High;ERKMIAP;ETOTIST;;Cinerin;CI;;;;162000;5\n" +
+            "CI Monitor - ODD WEEK;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;ETOTIST;;Cinerin;CI;;;;162000;5\n" +
+            "EPG stportal node maintenance - ODD WEEK;" + str(
                 SPRINT_ID) + ";Task;High;ERKMIAP;ETOTIST;;Cinerin;CI;;;;108000;3.75\n" +
-            "EPG stportal node maintenance;" + str(
+            "EPG stportal node maintenance - EVEN WEEK;" + str(
                 SPRINT_ID) + ";Task;High;ETHNYZ;ETOTIST;;Cinerin;CI;;;;108000;3.75\n" +
             "Main Track Releasability reporting, monitoring W3;" + str(
                 SPRINT_ID) + ";Task;High;etotist;ETOTIST;" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +

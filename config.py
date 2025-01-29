@@ -1,15 +1,17 @@
 # these variables should be updated!!!
 SPRINT_ID = 22588
 TREX_QUERY_FOR_ALL_CINERIN_TCS_RELEASE = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_3.38_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22]}}'
-SPRINT_START_DATE = "2024-12-02"
+SPRINT_START_DATE = "2025-01-30"
 SPRINT_WEEKS = 3
-MAIN = "EPG3.41"
-RELEASE = "EPG3.40"
+MAIN = "EPG3.42"
+RELEASE = "EPG3.41"
 RELEASE_NEEDED = False
 
 # these variables should not be updated
 TREX_QUERY_FOR_ALL_CINERIN_TCS_MAIN = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_MASTER_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22],%22Responsible_Team%22:%22Cinerin%22}}'
 TEAM = "Cinerin"
+SM = "ETOTIST"
+SPRINT_FILE_NAME = 'sprint.csv'
 TODO_DASHBOARD = "https://dashboards.sero.wh.rnd.internal.ericsson.com/epg_st_passrates/epg_st_passrates_weekly_master_to_do_team.html"
 OUT_OF_DATE_DASHBOARD = "https://dashboards.sero.wh.rnd.internal.ericsson.com/epg_st_passrates/epg_st_passrates_weekly_master_not_run_team.html"
 TREX_LOGIN = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_MASTER_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22]}}'

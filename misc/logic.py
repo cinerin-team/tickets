@@ -70,9 +70,9 @@ def write_additional_tickets():
                 SPRINT_ID) + ";Task;High;ERKMIAP;" + SM + ";;Cinerin;CI;;;;108000;3.75\n" +
             "EPG stportal node maintenance - EVEN WEEK;" + str(
                 SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";;Cinerin;CI;;;;108000;3.75\n" +
-            "Main Track Releasability reporting; monitoring W3;" + str(
+            "Main Track Releasability reporting W3;" + str(
                 SPRINT_ID) + ";Task;High;etotist;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
-            "Main Track Releasability reporting; monitoring W2;" + str(
+            "Main Track Releasability reporting W2;" + str(
                 SPRINT_ID) + ";Task;High;ethnyz;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
-            "Main Track Releasability reporting; monitoring W1;" + str(
+            "Main Track Releasability reporting W1;" + str(
                 SPRINT_ID) + ";Task;High;ecsiger;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n")

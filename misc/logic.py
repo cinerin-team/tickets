@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from config import TCS, SPRINT_START_DATE, SPRINT_WEEKS, SCOPE_MAPPING, SPRINT_ID, MAIN, TEAM, SM, SPRINT_FILE_NAME
 
 
-def collect_all_our_tickets_with_their_last_build_and_run_from_the_TREQ(trex_arr):
+def collect_all_our_tickets_with_their_last_build_and_run_from_the_treq(trex_arr):
     result = []
     for tc in TCS.keys():
         for trex in trex_arr:
@@ -28,8 +28,8 @@ def collect_the_tcs_which_will_todo_in_next_sprint(tc_w_last_run):
                     TCS[tc["Testcase Id"]]["scope"]])
             if final_date < end_of_sprint:
                 result.append((tc["Testcase Id"], " scope: " + str(SCOPE_MAPPING[
-                                                                             TCS[tc["Testcase Id"]][
-                                                                                 "scope"]]) + " days"))
+                                                                       TCS[tc["Testcase Id"]][
+                                                                           "scope"]]) + " days"))
 
     return result
 

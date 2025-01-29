@@ -62,8 +62,8 @@ def clear_and_start_file():
 def write_additional_tickets():
     with open(SPRINT_FILE_NAME, 'a+') as file:
         file.write(
-            "EP handling;" + str(SPRINT_ID) + ";Task;High;ecsiger;" + SM + ";;Cinerin;ST;;;;;\n" +
-            "EP handling;" + str(SPRINT_ID) + ";Task;High;etotist;" + SM + ";;Cinerin;ST;;;;;\n" +
+            "EP handling;" + str(SPRINT_ID) + ";Task;High;ECSIGER;" + SM + ";;Cinerin;ST;;;;;\n" +
+            "EP handling;" + str(SPRINT_ID) + ";Task;High;ETOTIST;" + SM + ";;Cinerin;ST;;;;;\n" +
             "CI Monitor - EVEN WEEK;" + str(SPRINT_ID) + ";Task;High;ERKMIAP;" + SM + ";;Cinerin;CI;;;;162000;5\n" +
             "CI Monitor - ODD WEEK;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";;Cinerin;CI;;;;162000;5\n" +
             "EPG stportal node maintenance - ODD WEEK;" + str(
@@ -71,8 +71,8 @@ def write_additional_tickets():
             "EPG stportal node maintenance - EVEN WEEK;" + str(
                 SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";;Cinerin;CI;;;;108000;3.75\n" +
             "Main Track Releasability reporting W3;" + str(
-                SPRINT_ID) + ";Task;High;etotist;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
+                SPRINT_ID) + ";Task;High;ETOTIST;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
             "Main Track Releasability reporting W2;" + str(
-                SPRINT_ID) + ";Task;High;ethnyz;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
+                SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
             "Main Track Releasability reporting W1;" + str(
-                SPRINT_ID) + ";Task;High;ecsiger;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n")
+                SPRINT_ID) + ";Task;High;ECSIGER;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n")

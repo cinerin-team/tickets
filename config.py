@@ -1,7 +1,7 @@
 # these variables should be updated!!!
-SPRINT_ID = 22969
+SPRINT_ID = 23119
 TREX_QUERY_FOR_ALL_CINERIN_TCS_RELEASE = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_3.38_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22]}}'
-SPRINT_START_DATE = "2025-02-03"
+SPRINT_START_DATE = "2025-02-24"
 SPRINT_WEEKS = 3
 MAIN = "EPG3.42"
 RELEASE = "EPG3.41"

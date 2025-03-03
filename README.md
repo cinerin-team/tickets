@@ -7,3 +7,4 @@ https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?cs=5780625
 
 replace the msgedgedriver.exe
 
+Don't forget to update the password in the pass_and_repo.ini with the real actual password. At the first run it will be encrypted! Leave the key as-is!

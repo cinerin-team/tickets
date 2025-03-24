@@ -1,7 +1,7 @@
 # these variables should be updated!!!
 SPRINT_ID = 23119
 TREX_QUERY_FOR_ALL_CINERIN_TCS_RELEASE = 'https://epgweb.sero.wh.rnd.internal.ericsson.com/treqsviewer/viewer?{%22product_part%22:%22build%22,%22product%22:%22EPG_3.38_28%22,%22build%22:%22latest%22,%22type%22:%22testcase%22,%22selected%22:[%22testcase_id%22,%22build_time%22,%22job_time%22],%22filters%22:{%22parent_revision%22:[%22true%22]}}'
-SPRINT_START_DATE = "2025-02-24"
+SPRINT_START_DATE = "2025-03-03"
 SPRINT_WEEKS = 3
 MAIN = "EPG3.42"
 RELEASE = "EPG3.41"
@@ -27,12 +27,12 @@ TCS = {
     "TC37515.8.1.5.1": {"scope": "Basic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_BASIC", "Label4": "ST_DAILY", "Original Estimate": 86400, "Story Points": 3},
     "TC37512.4.4.18.23": {"scope": "Basic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_BASIC", "Label4": "ST_DAILY", "Original Estimate": 86400, "Story Points": 3},
     "TC37512.4.6.10.11": {"scope": "Dynamic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
-    "TC37512.4.6.17.1": {"scope": "Dynamic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
-    "TC37512.6.6.17.5": {"scope": "Dynamic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37512.4.6.17.1": {"scope": "Dynamic", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37512.6.6.17.5": {"scope": "Dynamic", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
     "TC37512.6.6.17.12": {"scope": "Dynamic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "CAPACITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
     "TC2020.5.6.9.5": {"scope": "2Extended", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_2EXTENDED", "Label4": "ST_BI-WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
-    "TC2020.5.6.14.1": {"scope": "Dynamic", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
-    "TC1123.1.6.1.1": {"scope": "Dynamic", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC2020.5.6.14.1": {"scope": "Dynamic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC1123.1.6.1.1": {"scope": "Dynamic", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
     "TC22687.1.1.2.1": {"scope": "Dynamic", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
     "TC22711.2.2.2.1": {"scope": "Extended", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "ROBUSTNESS", "Label3": "ST_EXTENDED", "Label4": "ST_WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
     "TC37553.1.6.8": {"scope": "Dynamic", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
@@ -44,8 +44,8 @@ TCS = {
     "TC37548.3.6.3": {"scope": "Extended", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_EXTENDED", "Label4": "ST_WEEKLY", "Original Estimate": 14400, "Story Points": 0.5},
     "TC37548.5.6.1": {"scope": "Dynamic", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
     "TC37548.5.6.2": {"scope": "Dynamic", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
-    "TC37548.6.6.1": {"scope": "Dynamic", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
-    "TC37548.6.6.2": {"scope": "Dynamic", "owner": "ERKMIAP", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5}
+    "TC37548.6.6.1": {"scope": "Dynamic", "owner": "ETHNYZ", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5},
+    "TC37548.6.6.2": {"scope": "Dynamic", "owner": "ECSIGER", "Label1": "REGRESSION", "Label2": "STABILITY", "Label3": "ST_DYNAMIC", "Label4": "ST_MONTHLY", "Original Estimate": 14400, "Story Points": 0.5}
 }
 SCOPE_MAPPING = {
     "2Extended": 14,

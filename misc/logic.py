@@ -64,18 +64,9 @@ def write_additional_tickets():
         file.write(
             "EP handling;" + str(SPRINT_ID) + ";Task;High;ECSIGER;" + SM + ";;Cinerin;ST;;;;;\n" +
             "EP handling;" + str(SPRINT_ID) + ";Task;High;ETOTIST;" + SM + ";;Cinerin;ST;;;;;\n" +
-            "CI Monitor - W1;" + str(SPRINT_ID) + ";Task;High;ERKMIAP;" + SM + ";;Cinerin;CI;;;;54000;1.67\n" +
-            "CI Monitor - W2;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";;Cinerin;CI;;;;54000;1.67\n" +
-            "CI Monitor - W3;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";;Cinerin;CI;;;;54000;1.67\n" +
-            "EPG stportal node maintenance - W1;" + str(
-                SPRINT_ID) + ";Task;High;ERKMIAP;" + SM + ";;Cinerin;CI;;;;36000;1.25\n" +
-            "EPG stportal node maintenance - W2;" + str(
-                SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";;Cinerin;CI;;;;36000;1.25\n" +
-            "EPG stportal node maintenance - W3;" + str(
-                SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";;Cinerin;CI;;;;36000;1.25\n" +
-            "Main Track Releasability reporting W3;" + str(
-                SPRINT_ID) + ";Task;High;ETOTIST;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
-            "Main Track Releasability reporting W2;" + str(
-                SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n" +
-            "Main Track Releasability reporting W1;" + str(
-                SPRINT_ID) + ";Task;High;ECSIGER;" + SM + ";" + MAIN + ";Cinerin;Other;;;;14400;0.5\n")
+            "CI Monitor - W1;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";;Cinerin;CI;;;;90000;3.125\n" +
+            "CI Monitor - W2;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";;Cinerin;CI;;;;90000;3.125\n" +
+            "CI Monitor - W3;" + str(SPRINT_ID) + ";Task;High;ETHNYZ;" + SM + ";;Cinerin;CI;;;;90000;3.125\n" +
+            "CI Monitor - W1;" + str(SPRINT_ID) + ";Task;High;ECSIGER;" + SM + ";;Cinerin;CI;;;;54000;1.875\n" +
+            "CI Monitor - W2;" + str(SPRINT_ID) + ";Task;High;ECSIGER;" + SM + ";;Cinerin;CI;;;;54000;1.875\n" +
+            "CI Monitor - W3;" + str(SPRINT_ID) + ";Task;High;ECSIGER;" + SM + ";;Cinerin;CI;;;;54000;1.875\n")
